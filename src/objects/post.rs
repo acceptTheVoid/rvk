@@ -19,7 +19,7 @@ pub struct Post {
     pub likes: Option<Likes>,
     pub reposts: Option<Reposts>,
     pub views: Option<Views>,
-    pub post_type: String,
+    pub post_type: Option<String>,
     pub post_source: Option<post_source::PostSource>,
     pub attachments: Option<Vec<attachment::WallAttachment>>,
     pub geo: Option<geo::Geo>,

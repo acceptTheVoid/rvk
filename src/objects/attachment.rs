@@ -69,8 +69,8 @@ pub struct WallAttachment {
 pub struct PostedPhoto {
     pub id: Integer,
     pub owner_id: Integer,
-    pub photo_130: String,
-    pub photo_604: String,
+    pub photo_130: Option<String>,
+    pub photo_604: Option<String>,
 
     /// Access key may be present in attachments
     /// (
@@ -137,7 +137,7 @@ pub struct Card {
 #[derive(Deserialize, Clone, Debug)]
 pub struct Event {
     pub id: Integer,
-    pub time: Integer,
+    pub time: Option<Integer>,
     pub member_status: Integer,
     pub is_favorite: Boolean,
     pub address: Option<String>,

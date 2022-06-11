@@ -6,7 +6,7 @@ pub struct Geo {
     #[serde(rename = "type")]
     pub type_: String,
 
-    pub coordinates: Coordinates,
+    pub coordinates: Result<Coordinates, String>,
     pub place: Option<Place>,
 }
 

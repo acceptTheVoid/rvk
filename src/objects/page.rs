@@ -5,7 +5,7 @@ use super::*;
 pub struct Page {
     pub id: Integer,
     pub group_id: Integer,
-    pub creator_id: Integer,
+    pub creator_id: Option<Integer>,
     pub title: String,
     pub current_user_can_edit: Integer,
     pub current_user_can_edit_access: Integer,
