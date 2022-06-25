@@ -86,8 +86,8 @@ pub struct PostedPhoto {
 pub struct Graffiti {
     pub id: Integer,
     pub owner_id: Integer,
-    pub photo_130: String,
-    pub photo_604: String,
+    pub photo_130: Option<String>,
+    pub photo_604: Option<String>,
 
     /// Access key may be present in attachments
     /// (
@@ -103,8 +103,8 @@ pub struct Graffiti {
 pub struct App {
     pub id: Integer,
     pub name: String,
-    pub photo_130: String,
-    pub photo_604: String,
+    pub photo_130: Option<String>,
+    pub photo_604: Option<String>,
 
     /// Access key may be present in attachments
     /// (

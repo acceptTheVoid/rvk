@@ -7,7 +7,7 @@ pub struct MarketItem {
     pub owner_id: Integer,
     pub title: String,
     pub description: String,
-    pub price: Result<link::Price, String>,
+    pub price: link::Price,
     pub category: Category,
     pub thumb_photo: String,
     pub date: Integer,

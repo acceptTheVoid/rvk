@@ -23,9 +23,16 @@ pub struct Product {
 /// <https://vk.com/dev/price>
 #[derive(Deserialize, Clone, Debug)]
 pub struct Price {
-    pub amount: Integer,
+    pub amount: Amount,
     pub currency: Currency,
     pub text: String,
+}
+
+#[derive(Debug, Clone, Deserialize)]
+#[serde(untagged)]
+pub enum Amount {
+    NewAmount(Integer),
+    OldAmount(String),
 }
 
 /// <https://vk.com/dev/price>
